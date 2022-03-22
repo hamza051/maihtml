@@ -1,0 +1,475 @@
+<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<span style="width:20%;" class="input-group-text" id="LOG"><b>destinataire</b></span>
+<input style="width:20%;"   type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="mail"> 
+<br>
+<span style="width:20%;" class="input-group-text" id="LOG"><b>Objet</b></span>
+<input style="width:20%;"   type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="obj">
+<br>
+<span style="width:20%;" class="input-group-text" id="LOG"><B>Message</B></span>
+<textarea style="width:30%;" class="form-control" id="message" rows="3"></textarea>
+<br>
+<button type="button" class="btn btn-primary" id="test" onclick="sendEmail()">Envoyer Mail</button>
+
+
+
+
+
+
+
+</html>    
+
+
+
+
+
+<script>
+   
+   function sendEmail() {
+    msg=document.getElementById("message").value;       
+
+mail_body=`<!DOCTYPE HTML>
+
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Devred</title>
+
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="date=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="email=no" />
+<style type="text/css">
+
+    #outlook a {padding:0;}
+	.yshortcuts a {border-bottom: none !important;}
+	.ReadMsgBody {width: 100%;}
+    body{width:100% !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; margin:0; padding:0;}
+    .ExternalClass {width:100%;}
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+    #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+    img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+    .image_fix {display:block;}
+    a img {border:none;}
+    a {font-weight:normal; font-size:1em;}
+    p {margin: 1em 0; font-weight:normal; font-size:1em;}
+    table td {border-collapse: collapse; font-weight:normal; font-size:1em;}
+    table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+	div {border:0px;}
+
+	.ReadMsgBody {width:100%;}
+
+	.ExternalClass {mso-line-height-rule:exactly;line-height:100%;width:100%;}
+
+	.appleLinks * {color:inherit !important;text-decoration:inherit !important;}
+
+	.visibility_mobile {
+		display:none !important;
+		mso-hide:all !important; /* hide elements in Outlook 2007-2013 */
+		visibility:hidden !important;
+		max-height:0 !important;
+		font-size:0 !important;
+		line-height:0 !important;
+		padding:0 !important;
+	}
+
+	@media screen and (max-width: 660px) {
+		img{height:auto !important;}
+		.hide{display:none !important; width:0 !important; height:0 !important; font-size:0px !important; line-height:0 !important; overflow:hidden !important; max-height:0px !important; mso-hide:all !important;}
+		.db{display:block !important;}
+		.shrink425{width:425px !important; height:auto !important;}
+		.shrink410{width:410px !important; height:auto !important;}
+		.shrink340{width:340px !important; height:auto !important;}
+		.shrink330{width:330px !important; height:auto !important;}
+		.shrink320{width:445px !important; height:auto !important;}
+		.shrink250{width:250px !important; height:auto !important;}
+		.shrink222{width:222px !important; height:auto !important;}
+		.shrink170{width:170px !important; height:auto !important;}
+		.shrink165{width:165px !important; height:auto !important;}
+		.shrink145{width:145px !important; height:auto !important;}
+		.shrink10{width:10px !important; height:auto !important;}
+		.shrink5{width:5px !important; height:auto !important;}
+		.hauto{height:auto !important;}
+		.h30{height:30px !important;}
+		.wauto{width:auto !important;}
+		.tac{text-align:center!important}
+		.tal{text-align:left!important}
+		.visibility_mobile {
+			max-height:none !important;
+			font-size:1px !important;
+			display:block !important;
+			overflow:visible !important;
+			visibility:visible !important;
+			line-height:normal !important;
+			float:none !important;
+		}
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+</head>
+<body bgcolor="#ffffff" style="-webkit-font-smoothing: antialiased; -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;height:100% !important;width:100% !important; margin:0; padding:0; background:#ffffff;">
+
+<center>
+
+<div style="background:#ffffff;margin:0;padding:0;">
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse !important;margin:0;padding:0;background:#ffffff;">
+    
+    <!-- Phrase intro + lien version hébergée -->
+    <tr>
+    	<td align="center">
+            <table role="presentation" class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+				<tr>
+                	<td height="10" style="height:10px;"></td>
+                </tr>
+				<tr>
+                    <td style="font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size:14px; line-height:normal; color:#666666; text-align:center; vertical-align:top;">
+                        
+                        <table class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+                            <tr>
+                                <td width="15"></td>
+                                <td style="text-align:center; color:#000000; font-family:Arial, Helvetica, sans-serif; font-size: 10px;">
+                                    <a href="#" target="_blank" style="color:#000000;text-decoration:none;">Visualiser la version en ligne</a>
+                                </td>
+                                <td width="15"></td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+				<tr>
+                	<td height="10" style="height:10px;"></td>
+                </tr>
+            </table>
+    	</td>
+    </tr>
+	<!-- Fin phrase intro + lien version hébergée -->
+	
+    <!-- LOGO -->
+    <tr>
+        <td align="center">
+            <table class="shrink340" width="640" cellpadding="0" cellspacing="0" border="0" align="center" style="width:640px;" role="presentation">
+                <tr>
+                    <td width="640" height="17" bgcolor="#FFFFFF"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="shrink340" width="640" cellpadding="0" cellspacing="0" border="0" align="center" style="width:640px;" role="presentation">
+                            <tr>
+                                <td>
+                                	<table width="227" cellpadding="0" cellspacing="0" border="0" align="center" style="width:227px;" role="presentation">
+                                		<tr>
+                                        	<td>
+                                            	<a href="#" target="_blank">
+                                                	<img src="images/devred.png" width="227" height="22" alt="" style="display:block;" border="0" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="640" height="25" bgcolor="#FFFFFF"></td>
+                </tr> 
+           </table>
+        </td>
+    </tr>
+	<!-- Fin LOGO -->
+    
+    <tr>
+        <td align="center">
+        	<table bgcolor="#FFFFFF" role="presentation" class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+                <tr>
+                	<td>
+                    	<img src="images/service_cli.png" width="640" height="156" alt="BON ANNIVERSAIRE" style="display:block;" class="shrink320" border="0" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+    <!-- Bloc Edito Titre + Paragraphe -->
+    <tr>
+        <td align="center">
+        	<table bgcolor="#FFFFFF" role="presentation" class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+                <tr>
+                	<td align="center" bgcolor="#FFFFFF" width="40" style="background-color:#FFFFFF;width:40px;" class="shrink10"></td>
+                    <td>
+                    	<table bgcolor="#FFFFFF" role="presentation" class="shrink425" width="560" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:560px;" align="center">
+                        	<tr>
+                            	<td height="30" style="height:30px;"></td>
+                            </tr>
+                            <tr>
+                            	<td style="text-align:center;font-family:Arial, Helvetica, sans-serif;color:#000000;font-size:22px;font-weight:bold;">
+                                	Bonjour,
+                                </td>
+                            </tr>
+                            <tr>
+                            	<td height="15" style="height:15px;"></td>
+                            </tr>
+                            <tr>
+                            	<td style="text-align:center;font-family:Arial, Helvetica, sans-serif;color:#000000;font-size:16px;">
+                                	`+msg+` 
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF" width="40" style="background-color:#FFFFFF;width:40px;" class="shrink10"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Fin Bloc Edito Titre + Paragraphe -->
+    
+     <tr>
+        <td align="center">
+        	<table bgcolor="#FFFFFF" role="presentation" class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+                <tr>
+                	<td>
+                    	<img src="images/products.png" width="640" height="220" alt="BON ANNIVERSAIRE" style="display:block;" class="shrink320" border="0" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+    <tr>
+        <td align="center">
+        	<table bgcolor="#FFFFFF" role="presentation" class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+                <tr>
+                	<td align="center" bgcolor="#FFFFFF" width="20" style="background-color:#FFFFFF;width:20px;" class="shrink10"></td>
+                    <td>
+                    	<table bgcolor="#FFFFFF" role="presentation" class="shrink320" width="580" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:580px;" align="center">
+                        	<tr>
+                            	<td>
+                                	<table bgcolor="#FFFFFF" role="presentation" width="580" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:580px;" class="shrink320" align="center">
+                                    	<tr>
+                                        	<td>
+                                            	<!--[if mso]>
+                                                    <table width="580" cellpadding="0" cellspacing="0" border="0" align="left" style="width:580px;" role="presentation">
+                                                        <tr>
+                                                            <td valign="top">
+                                                <![endif]-->
+                                                <table width="260" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="left" style="width:260px;" class="shrink320" role="presentation">
+                                                    <tr>
+                                                    	<td height="30" style="height:30px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>
+                                                        	<table width="31" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="center" style="width:31px;" role="presentation">
+                                                            	<tr>
+                                                                	<td>
+                                                                    	<img src="images/contact.png" width="31" height="47" alt="" style="display:block;" border="0" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td height="46" style="text-align:center;font-family:Arial, Helvetica, sans-serif;color:#000000;font-size:16px; height:46px;">
+                                                        	<strong>Contactez-nous</strong><br/>
+                                                            du Lundi au samedi de 8h30 à 20h 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td height="10" style="height:10px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        	<table width="260" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="center" style="width:260px;" role="presentation">
+                                                            	<tr>
+                                                                	<td>
+                                                                        <div><!--[if mso]>
+                                                                          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="tel:0970283204" style="height:52px;v-text-anchor:middle;width:260px;" stroke="f" fillcolor="#000000">
+                                                                            <w:anchorlock/>
+                                                                            <center>
+                                                                          <![endif]-->
+                                                                              <a href="tel:0970283204" style="background-color:#000000;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:26px;text-align:center;text-decoration:none;width:260px;-webkit-text-size-adjust:none;">
+                                                                                09 70 28 32 04<br/>
+                                                                                (prix d’un appel local)                                                                              </a>
+                                                                          <!--[if mso]>
+                                                                            </center>
+                                                                          </v:rect>
+                                                                        <![endif]--></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="25" style="height:25px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <!--[if mso]>
+                                                    		</td>
+                                                            <td>
+                                                <![endif]-->
+                                                <table width="60" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="left" style="width:60px;" class="hide" role="presentation">
+                                                	<tr>
+                                                    	<td height="40" width="60" style="height:40px;width:60px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <!--[if mso]>
+                                                    		</td>
+                                                            <td>
+                                                <![endif]-->
+                                                <table width="260" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="right" style="width:260px;" class="shrink320" role="presentation">
+                                                    <tr>
+                                                    	<td height="30" style="height:30px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td>
+                                                        	<table width="42" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="center" style="width:42px;" role="presentation">
+                                                            	<tr>
+                                                                	<td>
+                                                                    	<img src="images/form.png" width="42" height="47" alt="" style="display:block;" border="0" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td height="46" style="text-align:center;font-family:Arial, Helvetica, sans-serif;color:#000000;font-size:16px;height:46px;">
+                                                        	Via notre <strong>formulaire en ligne</strong>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td height="10" style="height:10px;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                        	<table width="260" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" align="center" style="width:260px;" role="presentation">
+                                                            	<tr>
+                                                                	<td>
+                                                                        <div><!--[if mso]>
+                                                                          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.devred.com/contact/?utm_medium=email&tpc=$code_client$&utm_campaign=trigger_service_client" style="height:52px;v-text-anchor:middle;width:260px;" stroke="f" fillcolor="#000000">
+                                                                            <w:anchorlock/>
+                                                                            <center>
+                                                                          <![endif]-->
+                                                                              <a href="https://www.devred.com/contact/?utm_medium=email&tpc=$code_client$&utm_campaign=trigger_service_client" style="background-color:#000000;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:52px;text-align:center;text-decoration:none;width:260px;-webkit-text-size-adjust:none;">
+                                                                                QUELLE EST VOTRE DEMANDE ?                                                                             </a>
+                                                                          <!--[if mso]>
+                                                                            </center>
+                                                                          </v:rect>
+                                                                        <![endif]--></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="35" style="height:35px;"></td>
+                                                    </tr>
+                                                </table>
+                                                <!--[if mso]>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF" width="20" style="background-color:#FFFFFF;width:20px;" class="shrink10"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+    <!-- Mentions légales -->
+    <tr>
+        <td align="center">
+        	<table bgcolor="#FFFFFF" role="presentation" class="shrink340" width="640" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:640px;" align="center">
+                <tr>
+                	<td align="center" bgcolor="#FFFFFF" width="25" style="background-color:#FFFFFF;width:25px;" class="shrink10"></td>
+                    <td>
+                    	<table bgcolor="#FFFFFF" role="presentation" class="shrink410" width="590" cellspacing="0" border="0" cellpadding="0" style="margin:0px auto; width:590px;" align="center">
+                        	<tr>
+                            	<td height="20" style="height:20px;"></td>
+                            </tr>
+                            <tr>
+                            	<td style="text-align:center;font-family:Arial, Helvetica, sans-serif;color:#7F7F7F;font-size:11px;text-align:justify;">
+                                	Vos données personnelles sont traitées par DEVRED*, agissant en qualité de responsable de traitement, à des fins d'information, d'organisation d'événements ou de prospection commerciale. Elles sont exclusivement destinées à DEVRED, et dans certains cas à ses sous-traitants pour les besoins mentionnés ci-avant. Vos données sont susceptibles d'être transférées vers un pays tiers. Ce transfert est effectué conformément à des garanties appropriées. Vos données personnelles sont conservées durant au moins trois ans.
+                                    <br/><br/>
+                                    Vous pouvez exercer vos droits et demander une copie des garanties appropriées en envoyant un email à notre délégué à la protection des données : 
+                                    <a href="mailto:dpo-devred@devred.fr" target="_blank" style="color:#7F7F7F;text-decoration:none;">dpo-devred@devred.fr</a>
+                                    <br/><br/>
+                                    Si vous ne souhaitez plus recevoir de devred@viasmtp.com. Pour ne plus recevoir aucune communication de DEVRED, merci de bien vouloir le demander en envoyant un email à 
+                                    <a href="mailto:dpo-devred@devred.fr" target="_blank" style="color:#7F7F7F;text-decoration:none;">dpo-devred@devred.fr</a> ou 
+                                    <a href="mailto:devred@viasmtp.com" target="_blank" style="color:#7F7F7F;text-decoration:none;">devred@viasmtp.com.</a>
+                                    <br/><br/>
+                                    Conformément à la loi "Informatique et libertés", vous disposez d'un droit d'accès et de rectification aux données vous concernant, 
+                                    d'un droit de suppression, d'un droit à la portabilité, d'un droit de donner des directives sur le sort de vos données en cas de décès, 
+                                    d'un droit à la limitation du traitement de vos données, du droit de vous opposer à leur traitement, 
+                                    ainsi que d'un droit d'introduire une réclamation auprès de la CNIL.
+                                    <br/><br/>
+                                    «DEVRED» désigne DEVRED S.A.S., une société par actions simplifiée de droit français<br/>
+                                    dont le siège social se situe 4 rue Rougemont, 75009 PARIS. »<br/>
+                                    2019 DEVRED S.A.S
+                                    <br/><br/>
+                                    Si vous ne souhaitez plus recevoir d'emails de notre part : Suivez <a href="#" target="_blank" style="color:#7F7F7F;text-decoration:none;">ce lien</a><br/>
+                                    www.devred.com R.C.S. PARIS B 342 948 965.<br/>
+                                    Photos non contractuelles.
+                                </td>
+                            </tr>
+                            <tr>
+                            	<td height="30" style="height:30px;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="center" bgcolor="#FFFFFF" width="25" style="background-color:#FFFFFF;width:25px;" class="shrink10"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Mentions légales -->
+
+</table>
+
+</div>
+
+</center>
+
+</body>
+
+</html>`
+
+
+    dest=document.getElementById("mail").value;
+    obj=document.getElementById("obj").value; 
+	Email.send({
+	Host: "smtp.office365.com",
+	Username : "serviceclient@devred.fr",
+	Password : "Brest2022!!",
+	To : dest,
+	From : "serviceclient@devred.fr",
+	Subject : obj,
+	Body :mail_body,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
